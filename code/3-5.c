@@ -10,15 +10,16 @@ void my_sum(char type, int count, ...) {
     
     if (type == 'S') {
         for (int i = 0; i < count; i++) {
-            char *c =  va_arg(ap, char*);
-            printf("%s ", *c);
-            
+            printf("%s ", va_arg(ap, char*));
         }
+        printf("\n");
 
     } else if (type == 'C') {
         for (int i = 0; i < count; i++) {
             printf("%c", va_arg(ap, int));
+            
         }
+        printf("\n");
 
     } else if (type == 'D') {
         for (int i = 0; i < count; i++) {
@@ -28,7 +29,6 @@ void my_sum(char type, int count, ...) {
     } else {
         printf("ERROR");
     }
-    printf("\n");
 
     va_end(ap);
 }
