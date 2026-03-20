@@ -12,22 +12,22 @@ void my_sum(char type, int count, ...) {
         for (int i = 0; i < count; i++) {
             printf("%s ", va_arg(ap, char*));
         }
-        printf("\n");
 
     } else if (type == 'C') {
         for (int i = 0; i < count; i++) {
             printf("%c", va_arg(ap, int));
         }
-        printf("\n");
 
     } else if (type == 'D') {
         for (int i = 0; i < count; i++) {
             sum += va_arg(ap, int);
         }
-        printf("%d\n", sum);
+        printf("%d", sum);
     } else {
         printf("ERROR");
     }
+    printf("\n");
+
 }
 
 int main() {
